@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            background-color: lightgray;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 100px;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: teal;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+
+    <script>
+
+        const wrapEl = document.querySelector('.wrap')
+        const boxEl_1 = document.querySelector('.box:nth-child(1)') 
+        const pEl= document.createElement('p')
+        // const a = document.createElement('#')
+        
+
+        pEl.innerHTML = '<a href="https://www.naver.com/">네이버</a>'
+
+
+        wrapEl.appendChild(pEl)
+        wrapEl.removeChild(boxEl_1)
+
+
+    </script>
+
+
+</body>
+</html>
